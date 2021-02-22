@@ -7,6 +7,8 @@ h2 {
 }
 
 p { border: solid yellow;
+	color: orange;
+	font: 1.2em cursive;
 }
 
 h1 { 
