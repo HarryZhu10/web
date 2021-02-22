@@ -1,0 +1,14 @@
+body {background-color : black;
+}
+
+h2 {
+	color: orange;
+	font: 1.2em cursive;
+}
+
+p { border: solid yellow;
+}
+
+h1 { 
+color: red;
+}
