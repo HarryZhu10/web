@@ -6,7 +6,8 @@ h2 {
 	font: 1.2em cursive;
 }
 
-p { border: solid yellow;
+p { font: 1.2em;
+	border: solid yellow;
 	color: red;
 	
 }
