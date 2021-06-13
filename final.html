@@ -38,7 +38,52 @@ Class Period: 5th period
       file within a folder. The previews to the links will allow the person to see if they are going to the correct website.  
     </p>
     
+    <h2>
+      How to Use:
+    </h2>
     
+    <p>
+      Run the program in the same folder containing template.html, directorystyling.css, and the csv document. It will prompt two things in the shell, the name of the folder containing the files and the search query. Once they have been entered, the program will generate an html document named dir.html, which displays the results of the search.
+    </p>
+    
+    <h3>
+      How it Works:
+    </h3>
+    
+    <p>
+      The python code consists of a bunch of different functions that works together and return a string that contains the HTML code for the CSV files provided.
+      The python code will require you to import the csv files that you want to sort. The "makedict" function will take the CSV files and break them into lists by removing the "\n."
+      It will also place the given tags into a dictionary. The "search" function compares each dictionary value to query and adds it to list. The "makeheader" function creates the start of the HTML code.
+      It also connects the code to a CSS styling page. The "makelinks" function returns the string that contains the link of each CSV file. It adds on to the ouput of the "makeheader" function.
+      
+      
+    </p>
+    
+    <h4>
+      Files:
+    </h4>
+    
+    <p>
+      
+    </p>
+    
+    <h5>
+      Resources:
+    </h5>
+    
+    <p>
+      <a href="https://github.com/mks22-dw/python">Mr.Dw's Github Repository</a>
+    </p>
+    
+    <h6>
+      Bugs and Errors that may occur when using the Python Code:
+    </h6>
+    
+    <p>
+      (1) if a filename exceeds the banner's length, it will clip outside of the box (2) if the file preview contains a blank newline, it will cause the preview to not take up the entire box  (3) the box doesn't change color when hovering over the filename portion
+    </p>
+    
+   
   </body>
 
 </html>
