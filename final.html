@@ -1,110 +1,107 @@
 <!DOCTYPE html>
 
 <html>
-
   <head>
 
-    <title>  
-    Turn Your CSV Files into HTML File!
-    </title>
-    <link href="test.css" rel="stylesheet">
-    <h1>
-Project Name: CSV to HTML file sorter
-    </h1>
+    <title> Turn Your CSV Files into HTML File! </title>
+
+    <link href="final.css" rel="stylesheet">
+
+    <h1> Project Name: CSV to HTML file sorter </h1>
 
     <p>
-      Authors: Harry Zhu (Period 5), Neil Lin (Period 5), Jing Qian(Period 5)
+      Authors: Harry Zhu (Period 5), Neil Lin (Period 5), Jing Qian (Period 5)
+      <br>
+      Class Period: 5th Period
     </p>
-    
-<p>
-Class Period: 5th period 
-    </p>
-    
+
   </head>
-  
-  
-  
+
+<hr>
+
   <body>
-    
-    <h1>
-      Project Description: 
-    </h1>
-    
+
+    <h3> Project Description: </h3>
+
     <p>
-     The purpose of our project was to create a Python function that made it easier to sort CSV files and turn them into HTML. 
-      The function will have two inputs. The first will be the CSV document and the second one will be the tags of each file. The output will be a string that contains
-      the HTML code. The contents of the HTML code will be the tags, links, and previews. You will be able to run the HTML code and it will create a website. The 
-      website will consists of all the tags, links of each CSV file, and the preview of it. The code makes it so much easier for someone to look for a specific 
-      file within a folder. The preview to the links will allow the person to see if they are going to the correct website.  
+      The purpose of our project was to create a Python program that makes it easier to sort a bunch of files using a CSV document.
+      The function will read the CSV file and a search query, and the output will be a string that contains
+      the HTML code. The contents of the HTML code will be the links and previews to the search results. You will be able to run the HTML code and it will create and HTML file on your computer.
+      The website will consists of all the tags, links of each CSV file, and the preview of it. The code makes it much easier for someone to look for a specific
+      file within a folder. The preview to the links will allow the person to see if they are opening the correct file.    
     </p>
-    
-    <h2>
-      How to Use:
-    </h2>
-    
+
+    <h3> How to Use: </h3>
+
     <p>
-      Run the program in the same folder containing template.html, directorystyling.css, and the csv document. It will prompt two things in the shell, the name of the folder containing the files and the search query. Once they have been entered, the program will generate an html document named dir.html, which displays the results of the search.
+      Run the program in the same folder containing template.html, directorystyling.css, and the CSV document. Make sure the CSV document is named "tags.csv". The program will prompt two things in the shell, the name or path of the folder containing the files and the search query.
+      Once they have been entered, the program will generate an html document named dir.html, which displays the results of the search.
     </p>
-    
-    <h3>
-      How it Works:
-    </h3>
-    
+    <p> This can be used with any set of files, given that there is a corresponding csv file. The folder in question also does not have to be in the same directory as the python file, but this is not recommended as there can be problems with formatting. The csv can also be in any format, as long as the first column contains the names of the files</p>
+
+    <h3> How it Works: </h3>
+
     <p>
       The python code consists of a bunch of different functions that works together and return a string that contains the HTML code for the CSV files provided.
-      The python code will require you to import the csv files that you want to sort. The "makedict" function will take the CSV files and break them into lists by removing the "\n."
-      It will also place the given tags into a dictionary. The "search" function compares each dictionary value to query and adds it to list. The "makeheader" function creates the start of the HTML code.
-      It also connects the code to a CSS styling page. The "makelinks" function returns the string that contains the link of each CSV file.
-      The "makefooter" function adds the ending part of the HTML tags like </html> or </div>.
-      The "makehtml" function adds together all the parts of HTML code created by each of the previous python functions.
-      The "preview function takes the text from the document. 
-      The "shorten" function shortens the image of the preview so that it fits in the box
-      
-      
+      The python code will first import the CSV files that you want to sort.
+      The "makedict" function will take the CSV files and break them into dictionaries with filenames as keys and a list of information regarding the files as values. 
+      Then, the "search" function compares each dictionary value to query and adds it to a list if it matches.
+      The "makeheader", "makelinks", and "makefooter" functions each prepare part of the HTML document by taking parts of the template and modifying them, replacing placeholders with variables.
+      The "makelinks" function takes the list of results and generaterates a preview using the "preview" function, which attempts to open the files and uses the "shorten" function to make sure the text fits in the box.
+      All of this is then combined by the "makehtml" function, and the program writes the result to "dir.html".
     </p>
-    
-    <h4>
-      Files:
-    </h4>
-    
-    <p>
-      <ul>
-      <li>
-        final.html- It is this website, which we are using to explain the different parts of our project.
-        </li>
-        <li>
-          final.css- This is the css styling sheet for this website.
-        </li>
-        <li>
-          template.html-it's the html file the program reads and builds the output based on that.
-        </li>
-        <li>
-          
-        </li>
-</ul>
-    </p>
-    
-    <h5>
-      Resources:
-    </h3>
-    
-    <p>
-      <a href="https://github.com/mks22-dw/python">Mr.Dw's Github Repository</a>
-    </p>
-    
-    <h3>
-      Bugs and Errors that may occur when using the Python Code:
-    </h3>
-    
-    <p>
-      <ul>
-        <li> if a filename exceeds the banner's length, it will clip outside of the box </li>
-        <li> if the file preview contains a blank newline, it will cause the preview to not take up the entire box </li>
-        <li> the box doesn't change color when hovering over the filename portion </li>
-    </ul>
-        </p>
-    
-   
-  </body>
 
+    <h3> Files: </h3>
+
+    <table>
+      <tbody>
+        <tr>
+            <td>final.html</td>
+            <td>- This website, which we are using to explain the different parts of our project.</td>
+        </tr>
+        <tr>
+          <td>final.css</td>
+          <td>- This is the css styling sheet for this website.</td>
+        </tr>
+        <tr>
+          <td>template.html</td>
+          <td>- The html file the program reads and builds the output based off of.</td>
+        </tr>
+        <tr>
+        <tr>
+          <td>directorystyling.css</td>
+          <td>- The styling for the output file.</td>
+        </tr>
+          <td>sorter.py</td>
+          <td>- The program to run.</td>
+        </tr>
+	<tr>
+	  <td>python-main</td>
+	  <td>- An example set of files to sort</td>
+	</tr>
+	<tr>
+	  <td>tags.css</td>
+	  <td>- An example csv document containing tags corresponding to files in python-main</td>
+        </tbody>
+     </table>
+
+
+    <h3> Resources: </h3>
+
+      <p><a href="https://github.com/mks22-dw/python">Mr.DW's Github Repository</a> - Used as the example set of files to sort</p>
+
+    <h3> Known Bugs and Errors: </h3>
+
+      <ul>
+        <li> If a filename exceeds the banner's length, it will clip outside of the box </li>
+        <li> Blank newlines do not register correctly, causing the preview to not take up the entire box </li>
+        <li> The box doesn't change color when hovering over the filename portion </li>
+        <li> It will not work properly if the first column of the CSV file does not contain the names of the files </li>
+	<li> The folder path must be exact, otherwise the program will not be able to generate the files and links will be invalid</li>
+	<li> The previews only work for plaintext documents, other files such as images will not display properly</li>
+      </ul>
+
+  </body>
 </html>
+final.html
+5 KB
